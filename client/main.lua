@@ -9,15 +9,6 @@ Keys = {
     ['LEFT'] = 174, ['RIGHT'] = 175, ['TOP'] = 27, ['DOWN'] = 173,
 }
 
-GBCore = nil
-
-Citizen.CreateThread(function()
-    while GBCore == nil do
-        TriggerEvent('GBCore:GetObject', function(obj) GBCore = obj end)
-        Citizen.Wait(200)
-    end
-end)
-
 KeyMinigameCallback = {}
 
 RegisterNetEvent('gb-keyminigame:show')
